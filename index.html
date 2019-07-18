@@ -23,14 +23,22 @@
           reqParas[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
         }
       }
-    }  
+    }
     GetRequest();
+
+    function loginCallback(d) {
+      if (d && d.msgCode == 1) {
+        alert('登录成功');
+      } else {
+        alert(`登录失败：${d.msgText}`);
+      }
+    }
   </script>
 
 <link rel="stylesheet" href="styles.059d6fbbccbb9208583e.css"></head>
 
 <body>
   <app-root class="mat-app-background"></app-root>
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.e6386b9d0938a9838cc0.js"></script><script type="text/javascript" src="main.2827044b1ff0181f7896.js"></script></body>
+<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.e6386b9d0938a9838cc0.js"></script><script type="text/javascript" src="main.c59bf284e0bba31aeb3f.js"></script></body>
 
 </html>
