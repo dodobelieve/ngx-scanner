@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="/assets/javascript/jquery.min.js"></script>
+  <script src="/assets/javascript/md5.js"></script>
+
+  <title>智慧医院病人登录</title>
+  <base href="/ngx-scanner/">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <script language="javascript">
+    var reqParas = {};
+    function GetRequest() {
+      var url = location.search; //获取url中"?"符后的字串  
+      if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+          reqParas[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+        }
+      }
+    }
+    GetRequest();
+
+    function loginCallback(d) {
+      if (d && d.msgCode == 1) {
+        alert('登录成功');
+      } else {
+        alert(`登录失败：${d.msgText}`);
+      }
+    }
+  </script>
+
+<link rel="stylesheet" href="styles.059d6fbbccbb9208583e.css"></head>
+
+<body>
+  <app-root class="mat-app-background"></app-root>
+<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.e6386b9d0938a9838cc0.js"></script><script type="text/javascript" src="main.c95f9d9dfa0a12075e15.js"></script></body>
+
+</html>
